@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de contacto</title> 
+  </head>
+<body>  
+    <div class="contact_form">
+
+        <div class="formulario">            
+      <h1>Formulario de contacto</h1>
+                <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
+                <form>
+                    <p>
+                        <label for="nombre" class="colocar_nombre">Nombre
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <input type="text" name="introducir_nombre" id="nombre" required onkeypress="return soloLetras(event);" required="obligatorio" placeholder="Escribe tu nombre">
+                    </p>
+                
+                    <p>
+                        <label for="apellido" class="colocar_apellido">Apellido
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <input type="text" name="introducir_apellido"  required onkeypress="return soloLetras(event);" id="apellido" required="obligatorio"
+                            placeholder="Escribe tu apellido">
+                    </p>
+                
+                
+                    <p>
+                
+                        <label for="edad" class="colocar_edad">Edad
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <input type="number" min="8" max="80"  name="introducir_edad" id="edad" required="obligatorio"
+                            placeholder="Escribe tu edad">
+                    </p>
+                
+                    <label for="sexo" class="colocar_sexo">Sexo
+                        <span class="obligatorio">*</span>
+                    </label>
+                    <input type="text" name="introducir_sexo" id="sexo" required="obligatorio"
+                        placeholder="Escribe tu sexo">
+                    </p>
+                
+                
+                    <label for="dni" class="colocar_dni">DNI
+                        <span class="obligatorio">*</span>
+                    </label>
+                    <input type="text" minlength="8"  name="introducir_dni" id="dni" required="obligatorio"
+                        placeholder="Escribe tu DNI">
+                    </p>
+                
+
+                    <p>
+                        <label for="email" class="colocar_email">Email
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                    </p>
+                
+                
+                    <button type="submit" name="enviar_formulario" id="enviar">
+                        <p>Enviar</p>
+                    </button>
+                
+                    <p class="aviso">
+                        <span class="obligatorio"> * </span>los campos son obligatorios.
+                    </p>
+                
+                </form>
+                </div>
+                </div>
+
+    
+
+</body>
+
+<style>
+
+
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+
+
+
+
+body{
+    height: 100%; 
+    font-family: 'Noto Sans', sans-serif;
+  background-color: #3a9ab3; 
+}
+
+
+.contact_form{  
+    width: 460px; 
+  height: auto;
+  margin: 80px auto;
+    border-radius: 10px;  
+    padding-top: 30px;
+    padding-bottom: 20px;  
+  background-color: #fbfbfb; 
+  padding-left: 30px; 
+}
+
+
+input{
+    background-color: #fbfbfb; 
+    width: 408px; 
+    height: 40px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: #0e0d0d; 
+    margin-top: 10px;  
+    padding-left: 10px;
+  margin-bottom: 20px; 
+}
+
+
+textarea{
+  background-color: #fbfbfb; 
+    width: 405px; 
+    height: 150px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: #141414; 
+    margin-top: 10px;  
+    padding-left: 10px;
+  margin-bottom: 20px; 
+  padding-top: 15px; 
+}
+
+
+label{
+  display: block; 
+    float: center;  
+}
+
+
+button{
+    height: 45px; 
+    padding-left: 5px;
+    padding-right: 5px;     
+    margin-bottom: 20px; 
+    margin-top: 10px;   
+    text-transform: uppercase;
+    background-color: #050505; 
+    border-color: #131212; 
+    border-style: solid; 
+    border-radius: 10px;    
+    width: 420px;   
+  cursor: pointer;
+}
+
+
+button p{
+    color: #fff; 
+}
+
+
+span{
+    color: #131212; 
+}
+
+
+.aviso{
+    font-size: 13px;  
+    color: #0e0e0e;  
+}
+
+
+h1{
+    font-size: 39px;  
+    text-align: letf; 
+    padding-bottom: 20px; 
+    color: #111011;
+}
+
+
+h3{
+    font-size: 16px; 
+    padding-bottom: 30px;
+    color: #0e0e0e;   
+}
+
+
+p{
+    font-size: 14px; 
+    color: #0e0e0e; 
+}
+
+
+::-webkit-input-placeholder {
+ color: #a8a8a8;
+}
+
+
+::-webkit-textarea-placeholder {
+ color: #a8a8a8;
+}
+
+
+.formulario input:focus{
+    outline:0;
+    border: 1px solid #97d848;
+}
+
+
+.formulario textarea:focus{
+    outline:0;
+    border: 1px solid #97d848;
+}
+
+
+
+
+</style>
+
+
+
+
+
+</html>
+
+
+<script>
+
+function soloLetras(e) {
+    key = e.keyCode || e.which;
+    tecla = String.fromCharCode(key).toString();
+    letras = " áéíóúabcdefghijklmnñopqrstuvwxyzÁÉÍÓÚABCDEFGHIJKLMNÑOPQRSTUVWXYZ";//Se define todo el abecedario que se quiere que se muestre.
+    especiales = [8, 37, 39, 46, 6]; //Es la validación del KeyCodes, que teclas recibe el campo de texto.
+
+    tecla_especial = false
+    for(var i in especiales) {
+        if(key == especiales[i]) {
+            tecla_especial = true;
+            break;
+        }
+    }
+
+    if(letras.indexOf(tecla) == -1 && !tecla_especial){
+alert('Solo se permiten letras');
+        return false;
+      }
+}
+
+
+</script>
+
